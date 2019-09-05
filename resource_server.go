@@ -14,7 +14,7 @@ func resourceServer() *schema.Resource {
 	return &schema.Resource{
 		Create: resourceServerCreate,
 		Read:   resourceServerRead,
-		Update: resourceServerUpdate,
+		Update: resourceServerCreate,
 		Delete: resourceServerDelete,
 
 		Schema: map[string]*schema.Schema{

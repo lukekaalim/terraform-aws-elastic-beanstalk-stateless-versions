@@ -1,5 +1,5 @@
 resource "example_server" "my-server2" {
-  application_name = "1.2.3.4"
+  application_name = "1.2.3.4 ${md5(file("local.txt"))}"
   application_store_bucket_name = "lk-sandbox"
   application_version_filename = "local.txt"
 }
