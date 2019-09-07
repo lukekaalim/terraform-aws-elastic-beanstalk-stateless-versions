@@ -1,5 +1,2 @@
 cartographer_provider: $(wildcard *.go)
-	go build -o terraform-provider-aws-uncontrolled
-
-%.cartographer.zip: $(wildcard package/*.js)
-	(cd package && zip ../$@ *)
+	env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -o terraform-provider-aws-uncontrolled
